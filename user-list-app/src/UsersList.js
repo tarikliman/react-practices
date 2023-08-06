@@ -1,11 +1,10 @@
 const UsersList  = (props) => {
 
-
     return(
         <ul>
-            {props.UsersList.map( (user) => {
+            {props.userList.map( (user) => {
                 return(
-                    <li>{user.username}{user.age}</li>
+                    <li>{user.username} - {user.age} years old</li>
             );
             })}
         </ul>

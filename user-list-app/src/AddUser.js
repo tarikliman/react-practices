@@ -16,8 +16,12 @@ const AddUser  = (props) => {
         event.preventDefault();
         if(userInfo.username === "" || userInfo.age === ""){
             props.errorType("empty");
+        }else if( userInfo.age < 0){
+            props.errorType("negativeAge")
+        }else{
+            resetErrorandSaveUser();
         }
-        userInfo.age >= 0 ? resetErrorandSaveUser() : props.errorType("negativeAge"); 
+        
          
     }
 
